@@ -1,0 +1,30 @@
+{
+  "name": "brave-script-gatherer",
+  "version": "1.0.0",
+  "description": "Lambda function for fetching scripts that appear to inject global functions.",
+  "main": "lambda.js",
+  "scripts": {
+    "bundle": "make lambda",
+    "lint": "node node_modules/eslint/bin/eslint.js .",
+    "lint:fix": "node node_modules/eslint/bin/eslint.js . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brave/brave-script-gatherer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brave/brave-script-gatherer/issues"
+  },
+  "homepage": "https://github.com/brave/brave-script-gatherer#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "pg": "^7.4.3",
+    "request": "^2.86.0",
+    "request-promise-native": "^1.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1"
+  }
+}
