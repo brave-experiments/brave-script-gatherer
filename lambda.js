@@ -35,7 +35,7 @@ async function dispatch (args) {
     logger(args);
     const [error, msg] = utils.validateArgs(args);
     if (error !== null) {
-        logger(`Invalid arguments: ${msg}`);
+        logger(`Invalid arguments: ${error}`);
         return;
     }
 

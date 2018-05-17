@@ -19,10 +19,6 @@ lambda: clean
 	find $(TMP_WORKSPACE)/node_modules -type d -name "test" | xargs rm -Rf;
 	rm $(TMP_WORKSPACE)/Makefile;
 	rm $(TMP_WORKSPACE)/*.json;
-	find $(TMP_WORKSPACE)/node_modules -type d -name lodash -mindepth 3 | while read DIR; do \
-		xargs rm -Rf "$$DIR"; \
-		ln -s ../../lodash "$$DIR"; \
-	done;
 	cd $(TMP_WORKSPACE) && zip -r lambda.zip *;
 	cp $(TMP_WORKSPACE)/lambda.zip lambda.zip;
 
