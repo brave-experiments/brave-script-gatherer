@@ -33,9 +33,10 @@ async function dispatch (args) {
     }
 
     logger(args);
-    const [error, msg] = utils.validateArgs(args);
-    if (error !== null) {
-        logger(`Invalid arguments: ${error}`);
+    const argsError = utils.validateArgs(args);
+    if (argsError !== undefined) {
+        logger("Invalid arguments:");
+        logger(argsError);
         return;
     }
 
